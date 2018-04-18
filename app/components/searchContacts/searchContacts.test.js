@@ -14,15 +14,28 @@ beforeEach(inject(function($controller,$rootScope) {
       expect(searchContactsCtrl).toBeDefined();
     });
 
-    it('test for valid query',function(){
+    it('test for valid name query',function(){
       var results=scope.querySearchClient('ab');
       expect(results).toBeDefined();
       expect(results.length).toBeGreaterThan(0);
     })
 
 
-    it('test for invalid query',function(){
+    it('test for invalid name query',function(){
       var results=scope.querySearchClient('m');
+      expect(results).toBeDefined();
+      expect(results.length).toEqual(0);
+    })
+
+    it('test for valid policyNo query',function(){
+      var results=scope.querySearchClient('16');
+      expect(results).toBeDefined();
+      expect(results.length).toBeGreaterThan(0);
+    })
+
+
+    it('test for invalid policyNo query',function(){
+      var results=scope.querySearchClient('9');
       expect(results).toBeDefined();
       expect(results.length).toEqual(0);
     })
