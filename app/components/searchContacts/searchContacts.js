@@ -72,10 +72,7 @@ app.controller('SearchContactsCtrl', ['$scope', '$log',function($scope, $log) {
           }
     
       ];
-      return allClientInfo.map( function (repo) {
-        repo.value = repo.name.toLowerCase();
-        return repo;
-      });
+      return allClientInfo;
     }
 
     /**
@@ -85,7 +82,7 @@ app.controller('SearchContactsCtrl', ['$scope', '$log',function($scope, $log) {
       var lowercaseQuery = angular.lowercase(query);
 
       return function filterFn(item) {
-        return (item.value.indexOf(lowercaseQuery) === 0);
+        return (item.name.toLowerCase().indexOf(lowercaseQuery)===0 || item.policyNo.indexOf(lowercaseQuery) ===0);
       };
 
     }
