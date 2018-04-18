@@ -1,8 +1,17 @@
+
+.autocompletedemoCustomTemplate md-autocomplete-wrap:before {
+  font-family: "Material Icons";
+  content: "\E8B6";
+  line-height: 1;
+  padding: 8px 8px 0px 8px;
+  font-weight: normal;
+  font-size: 24px;
+  color: #61656d;
+}
 md-autocomplete{
-  padding: 1em !important;
+  padding: 1em 0 !important;
   background-color: #3f1a3f;
   color:#FFFFFF !important;
-  width: 98% !important;
 }
 .md-whiteframe-1dp, .md-whiteframe-z1{
   box-shadow: none !important;
@@ -60,13 +69,4 @@ md-autocomplete input:not(.md-input){
   }
   .md-autocomplete-suggestions li{
     height: auto !important;
-  }
-  .containerDiv{
-    display: flex !important;
-    background-color: #3f1a3f;
-    padding: 0 1em !important;
-  }
-  .alignsearchIcon{
-    align-self: center;
-    color: #61656d;
   }
