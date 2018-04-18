@@ -1,4 +1,4 @@
-The Application has an assistive search functionality. It shows results that matches the entered search query.
+The Application has an assistive search functionality. It shows results that matches the entered search query(contact name or policy number).
 
 To clone Repository:
 Clone Repository from 'https://github.com/palakbansal5892/SearchContacts'
